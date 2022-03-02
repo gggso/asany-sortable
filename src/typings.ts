@@ -351,4 +351,7 @@ export interface SortableProps<T extends ISortableItem> {
    * 放置元素
    */
   onDrop?: OnDrop;
+
+  noDrop?: string;
+  isDrop?: string;
 }
