@@ -1,3 +1,19 @@
+## [0.1.41](https://github.com/limaofeng/asany-sortable/compare/v0.1.30...v0.1.41) (2022-03-02)
+
+
+### Bug Fixes
+
+* sortableDrag class 改为动态传入 noDrop  isDrop ([922dcac](https://github.com/limaofeng/asany-sortable/commit/922dcac4d6e65c0acb9d26016b0c28c0053bf252))
+* sortableDrag class 改为动态传入 noDrop  isDrop ([49eceb3](https://github.com/limaofeng/asany-sortable/commit/49eceb3b901ec96a140e96584a4f4b33f3f843a5))
+* 修改 SortableContainer 拖拽状态 class名为 isDragging 未拖拽为 noDragging 移除写死背景色 ([34a298c](https://github.com/limaofeng/asany-sortable/commit/34a298c0c664a1f82fb047f899f8a90d289ebd64))
+
+
+### Features
+
+* 支持 empty 属性 ([cb9fe44](https://github.com/limaofeng/asany-sortable/commit/cb9fe442beccb4dc57e17a7182b6a507cea6df8b))
+
+
+
 ## [0.1.40](https://github.com/limaofeng/asany-sortable/compare/v0.1.30...v0.1.40) (2022-03-02)
 
 

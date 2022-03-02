@@ -187,7 +187,6 @@ const Template: Story<SortableProps> = (args) => {
   const [items, setItems] = useState(data);
 
   const handleChange = (data, event) => {
-    console.log('handleChange', data);
     setItems(data);
     Droppable.args.onChange(data, event);
   };

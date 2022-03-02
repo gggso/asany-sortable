@@ -59,7 +59,6 @@ const Template: Story<SortableProps> = (args) => {
   ]);
 
   const handleChange = (data, event) => {
-    console.log('handleChange', data);
     setItems(data);
     args.onChange(data, event);
   };

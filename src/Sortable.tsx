@@ -82,6 +82,8 @@ function Sortable<T extends ISortableItem>(
     itemRender,
     rerender = typeof itemRender === 'function',
     style,
+    noDrop,
+    isDrop
   } = props;
   const { direction = layout == 'grid' ? 'horizontal' : 'vertical' } = props;
   const items = buildItems(propsItems, children);
@@ -98,6 +100,8 @@ function Sortable<T extends ISortableItem>(
         tag={tag}
         ref={ref}
         empty={empty}
+        noDrop={noDrop}
+        isDrop={isDrop}
         mode={mode}
         className={classnames('sortable-container', `sortable-${layout}-${direction}`, className)}
         style={style}
@@ -129,12 +133,15 @@ interface SortableCoreProps<T extends ISortableItem> {
   draggable: DragCondition;
   onChange?: SortableChange;
   onClick?: (e: React.MouseEvent) => void;
+  noDrop?: string;
+  isDrop?: string;
 }
 
 const SortableCore = React.forwardRef(function <T extends ISortableItem>(
   { empty, itemRender, onChange, draggable, ...props }: SortableCoreProps<T>,
   ref: MutableRefObject<HTMLElement | null> | ((instance: HTMLElement | null) => void) | null
 ) {
+  
   const items = useSortableSelector((state) => state.items);
   const id = useSortableSelector((state) => state.id);
 

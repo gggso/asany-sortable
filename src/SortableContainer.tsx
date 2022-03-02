@@ -56,7 +56,6 @@ interface SortableContainerProps {
 
 function SortableContainer(props: SortableContainerProps, externalRef: any) {
   const { mode, onDrop, allowDrop, tag, className, style, children, accept, layout, direction, noDrop, isDrop } = props;
-
   const dispatch = useSortableDispatch();
   const events = useEventManager();
 
@@ -289,6 +288,7 @@ function SortableContainer(props: SortableContainerProps, externalRef: any) {
 
   // let backgroundColor = undefined;
   let sortableDrag = noDrop
+  
   if (canDrop) {
     // backgroundColor = 'rgba(68, 171, 255, 0.05)';
     sortableDrag = isDrop

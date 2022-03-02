@@ -34,7 +34,6 @@ const defaultStyle = {
 
 const SortItem = memo(
   forwardRef(({ data, style, drag }: SortableItemProps<any>, ref: any) => {
-    console.log('刷新 - 1:', data.name);
     return (
       <li style={{ ...defaultStyle, ...style }} ref={drag(ref)}>
         {data.name}
@@ -62,7 +61,6 @@ const Template: Story<SortableProps> = (args) => {
     }, [])
   );
 
-  console.log('items:', items.length);
 
   const handleChange = (data, event) => {
     args.onChange(data, event);
