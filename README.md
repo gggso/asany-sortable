@@ -2,6 +2,8 @@
 
 基于 React-Dnd 封装的拖拽排序组件
 
+修改 SortableContainer 拖拽状态 class名为 isDragging 未拖拽为 noDragging 移除写死背景色
+
 ## Install
 
 ```bash

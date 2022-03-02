@@ -285,23 +285,27 @@ function SortableContainer(props: SortableContainerProps, externalRef: any) {
     }
   }, [isOverCurrent]);
 
-  let backgroundColor = undefined;
+  // let backgroundColor = undefined;
+  let sortableDrag = 'noDragging'
   if (canDrop) {
-    backgroundColor = 'rgba(68, 171, 255, 0.05)';
+    // backgroundColor = 'rgba(68, 171, 255, 0.05)';
+    sortableDrag = 'isDragging'
   }
   if (isElement(tag)) {
     return React.cloneElement(tag as any, {
       ref: drop(buildExternalRef(ref)),
       children,
-      className: classnames(className),
-      style: { ...style, backgroundColor },
+      className: classnames(`${className} ${sortableDrag}`),
+      style: { ...style },
+      // style: { ...style, backgroundColor },
     });
   }
   return React.createElement(tag as any, {
     ref: drop(buildExternalRef(ref)),
     children,
-    className: classnames(className),
-    style: { ...style, backgroundColor },
+    className: classnames(`${className} ${sortableDrag}`),
+    style: { ...style },
+    // style: { ...style, backgroundColor },
   });
 }
 

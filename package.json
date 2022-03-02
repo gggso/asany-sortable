@@ -1,5 +1,5 @@
 {
-  "version": "0.1.30",
+  "version": "0.1.40",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -35,7 +35,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "@asany/sortable",
+  "name": "sortable-gggso",
   "author": "李茂峰",
   "repository": "https://github.com/limaofeng/asany-sortable",
   "module": "dist/sortable.esm.js",
